@@ -1,0 +1,5 @@
+import { Filter, Search } from 'lucide-react';
+
+export function FilterBar({ placeholder = 'Search by reference or owner' }: { placeholder?: string }) {
+  return <div className="flex flex-col gap-2 sm:flex-row"><label className="relative flex-1"><span className="sr-only">Search</span><Search className="absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-brand-muted" /><input className="h-11 w-full rounded-xl border border-brand-field bg-white pl-10 pr-4 text-sm outline-none placeholder:text-brand-muted focus:border-brand-blue" placeholder={placeholder} /></label><button type="button" className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-brand-border bg-white px-4 text-xs font-bold text-brand-primary"><Filter className="size-4" />Filters<span className="rounded-full bg-brand-blue-soft px-2 py-0.5 text-[9px] text-brand-blue">2</span></button><select aria-label="Status filter" className="h-11 rounded-xl border border-brand-field bg-white px-3 text-xs font-semibold text-brand-primary"><option>All statuses</option><option>Active</option><option>Failed</option><option>Escalated</option></select></div>;
+}

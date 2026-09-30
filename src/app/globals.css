@@ -1,0 +1,206 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-urbanist), system-ui, sans-serif;
+  --font-urbanist: var(--font-urbanist);
+  --font-orbitron: var(--font-orbitron);
+  --font-orbitron-bold: var(--font-orbitron);
+  --font-protest-strike: var(--font-protest-strike), sans-serif;
+  --font-poppins: var(--font-poppins);
+  --font-brand: var(--font-orbitron);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-white: var(--brand-white);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-page: var(--brand-page);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-border: var(--brand-border);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-brand-elevated: var(--brand-elevated);
+  --color-brand-field: var(--brand-field);
+  --color-brand-field-border: var(--brand-field-border);
+  --color-brand-indicator: var(--brand-indicator);
+  --color-brand-success: var(--brand-success);
+  --color-brand-success-soft: var(--brand-success-soft);
+  --color-brand-danger: var(--brand-danger);
+  --color-brand-danger-soft: var(--brand-danger-soft);
+  --color-brand-warning: var(--brand-warning);
+  --color-brand-warning-soft: var(--brand-warning-soft);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-soft: var(--brand-blue-soft);
+  --color-brand-violet: var(--brand-violet);
+  --color-brand-link: var(--brand-link);
+  --color-brand-gray: var(--brand-gray);
+  --color-brand-silver: var(--brand-silver);
+  --color-brand-preview: var(--brand-preview);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Raw palette — neutrals (ink scale) identical to Metro Business Portal */
+  --metro-ink-950: #0B0B0F;
+  --metro-ink-900: #18181B;
+  --metro-ink-850: #1A1A20;
+  --metro-ink-800: #26262E;
+  --metro-ink-700: #34343E;
+  --metro-ink-600: #4A4A55;
+  --metro-ink-500: #6B6B76;
+  --metro-ink-400: #8E8E98;
+  --metro-ink-300: #B4B4BC;
+  --metro-ink-200: #D4D4DA;
+  --metro-ink-100: #E8E8EC;
+  --metro-ink-50:  #F7F7F8;
+
+  /* Raw palette — accents */
+  --metro-blue: #0088FF;
+  --metro-link: #2783D4;
+  --metro-green: #34C759;
+  --metro-success: #12C48B;
+  --metro-red: #FB5A62;
+  --metro-amber: #F3BB1C;
+  --metro-yellow: #FFCC00;
+  --metro-warning: #FF9500;
+  --metro-violet: #8937F5;
+
+  /* Semantic tokens (Light) */
+  --brand-primary: #18181B;
+  --brand-secondary: #E5E5E5;
+  --brand-accent: #F3BB1C;
+  --brand-white: #FFFFFF;
+  --brand-dark: #212121;
+  --brand-page: #FAFAFA;
+  --brand-muted: #828282;
+  --brand-surface: #FFFFFF;
+  --brand-border: #F0F0F2;
+  --brand-subtle: #F7F7F8;
+  --brand-elevated: #FFFFFF;
+  --brand-indicator: #BDBAC1;
+  --brand-indicator-dark: #1B1B1B;
+  
+  --brand-success: #12C48B;
+  --brand-success-soft: rgba(18, 196, 139, 0.10);
+  
+  --brand-danger: #FB5A62;
+  --brand-danger-soft: rgba(251, 90, 98, 0.10);
+  
+  --brand-warning: #FF9500;
+  --brand-warning-soft: rgba(255, 149, 0, 0.10);
+  
+  --brand-blue: #0088FF;
+  --brand-blue-soft: rgba(0, 136, 255, 0.08);
+  
+  --brand-violet: #8937F5;
+  --brand-link: #2783D4;
+  --brand-field: #E1E1E1;
+  --brand-field-border: #E1E1E1;
+  --brand-gray: #666666;
+  --brand-silver: #A1A1AA;
+  --brand-preview: #F8F8F8;
+
+  /* Aliases for consistency across existing views */
+  --page: var(--brand-page);
+  --surface: var(--brand-surface);
+  --subtle: var(--brand-subtle);
+  --elevated: var(--brand-elevated);
+  --primary: var(--brand-primary);
+  --muted: var(--brand-muted);
+  --border: var(--brand-border);
+  --field: var(--brand-field);
+  --blue: var(--brand-blue);
+  --blue-soft: var(--brand-blue-soft);
+  --success: var(--brand-success);
+  --success-soft: var(--brand-success-soft);
+  --warning: var(--brand-warning);
+  --warning-soft: var(--brand-warning-soft);
+  --danger: var(--brand-danger);
+  --danger-soft: var(--brand-danger-soft);
+  --info: var(--brand-blue);
+}
+
+.dark {
+  --brand-primary: #FAFAFA;
+  --brand-secondary: #27272A;
+  --brand-accent: #F3BB1C;
+  --brand-white: #18181B;
+  --brand-dark: #E4E4E7;
+  --brand-page: #09090B;
+  --brand-muted: #A1A1AA;
+  --brand-surface: #141417;
+  --brand-border: #27272A;
+  --brand-subtle: #18181B;
+  --brand-elevated: #1F1F23;
+  --brand-field: #27272A;
+  --brand-field-border: #3F3F46;
+  --brand-indicator: #52525B;
+  --brand-indicator-dark: #E4E4E7;
+
+  --brand-success: #2DD4A7;
+  --brand-success-soft: rgba(45, 212, 167, 0.15);
+  
+  --brand-danger: #FF6B72;
+  --brand-danger-soft: rgba(255, 107, 114, 0.15);
+  
+  --brand-warning: #FF9E0A;
+  --brand-warning-soft: rgba(255, 158, 10, 0.15);
+  
+  --brand-blue: #3B9BFF;
+  --brand-blue-soft: rgba(59, 155, 255, 0.15);
+
+  --brand-gray: #A1A1AA;
+  --brand-silver: #71717A;
+  --brand-preview: #1C1C1F;
+}
+
+/* Metro brand classes matching Metro Business Portal */
+.metro-kicker {
+  font-family: var(--font-orbitron);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-muted);
+}
+
+.metro-card {
+  background: var(--brand-white);
+  border: 1px solid rgb(24 24 27 / 6%);
+  border-radius: 16px;
+  box-shadow: 0 14px 42px rgb(23 23 28 / 3.5%);
+}
+
+.metro-field {
+  min-height: 44px;
+  border: 1px solid var(--brand-field-border);
+  border-radius: 8px;
+  background: var(--brand-white);
+  padding: 10px 14px;
+  color: var(--brand-primary);
+  box-shadow: 0 2px 8px rgb(20 20 24 / 2.5%);
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--brand-page); color: var(--brand-primary); }
+button, input, select { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #cddcff; color: #18181B; }
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+:where(input, select, textarea):focus-visible {
+  outline: none;
+  border-color: var(--brand-primary) !important;
+  box-shadow: 0 0 0 1.5px var(--brand-primary) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+@keyframes schedule-popover { from { opacity: 0; transform: scale(.96) translateY(-4px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes schedule-drawer { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: translateX(0); } }
